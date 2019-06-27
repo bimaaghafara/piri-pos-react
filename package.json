@@ -1,0 +1,83 @@
+{
+  "name": "PiriPOS",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prestart": "react-native-node insert ./express_js_services",
+    "android": "npm run prestart && react-native run-android",
+    "clean": "cd android && ./gradlew clean && cd ..",
+    "clean-android": "npm run clean && npm run android",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "build": "cd express_js_services && yarn && cd .. && react-native-node insert ./express_js_services"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.110",
+    "@types/node": "^10.5.0",
+    "@types/prop-types": "^15.5.3",
+    "@types/react-native-vector-icons": "^4.6.1",
+    "@types/react-redux": "^6.0.3",
+    "@types/redux-form": "^7.3.1",
+    "accounting": "^0.4.1",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "native-base": "^2.6.1",
+    "pusher-js": "^4.2.2",
+    "react": "^16.3.0-alpha.1",
+    "react-moment": "^0.7.9",
+    "react-native": "0.54.3",
+    "react-native-background-job": "^2.1.1",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-imei": "^0.1.1",
+    "react-native-immediate-phone-call": "^1.0.0",
+    "react-native-loading-spinner-overlay": "^0.5.2",
+    "react-native-local-storage": "^1.5.2",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-modalbox": "^1.4.2",
+    "react-native-node": "git+https://git@github.com/uripsubekti13/react-native-node.git",
+    "react-native-push-notification": "^3.0.2",
+    "react-native-router-flux": "^4.0.0-beta.31",
+    "react-native-sunmi-inner-printer": "git+https://github.com/uripsubekti13/react-native-sunmi-inner-printer.git",
+    "react-native-switch-selector": "^1.1.8",
+    "react-native-vector-icons": "^4.6.0",
+    "react-redux": "^5.0.7",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.3.0",
+    "rxjs": "^5.5.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "@types/react": "^16.0.41",
+    "@types/react-native": "^0.52.19",
+    "@types/react-test-renderer": "^16.0.1",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-addons-test-utils": "^15.6.2",
+    "react-native-mock": "^0.3.1",
+    "react-native-typescript-transformer": "^1.2.3",
+    "react-test-renderer": "^16.3.0-alpha.1",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.8.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/"
+    ],
+    "cacheDirectory": ".jest/cache"
+  }
+}

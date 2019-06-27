@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es7", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "jsx": "react-native",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node",
+      "react",
+      "react-native"
+    ]
+  },
+  "files": [
+    "typings/index.d.ts",
+    "App/**/*.ts",
+    "App/**/*.tsx",
+    "App.tsx"
+  ],
+  "exclude": [
+    "android",
+    "ios",
+    "build",
+    "node_modules"
+  ],
+  "compileOnSave": false
+}

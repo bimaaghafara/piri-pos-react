@@ -1,0 +1,17 @@
+{
+  "name": "express_js_services",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.15.3",
+    "http": "0.0.0",
+    "ip": "^1.1.5",
+    "koa": "^2.5.1",
+    "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0",
+    "node-thermal-printer": "^2.0.0",
+    "request": "^2.87.0"
+  }
+}
